@@ -13,6 +13,7 @@ const addCard = async (cardInfo, cardImageLink) => {
   const cardImage = new Image();
   cardImage.src = cardImageLink;
   cardImage.classList = 'card-image';
+  cardImage.style = '--img-ratio: 0.685';
   // container for card information
   const cardInfoContainer = document.createElement('div');
   cardInfoContainer.classList = 'card-info';

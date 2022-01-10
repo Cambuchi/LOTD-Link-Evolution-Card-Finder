@@ -15,3 +15,14 @@
   top: 100vh;
   flex-shrink: 0;
 }
+
+@media only screen and (max-width: 750px) {
+  #footer {
+
+    font-size: 1rem;
+    height: 7.5vh;
+    position: sticky;
+    top: 100vh;
+    flex-shrink: 0;
+  }
+}

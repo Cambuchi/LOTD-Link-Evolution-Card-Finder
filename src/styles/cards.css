@@ -54,3 +54,31 @@ ul, li { /* reset the margin and padding */
   width: 257px;
   height: 375px;
 }
+
+@media only screen and (max-width: 750px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-info {
+    padding: 10px 0px;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .card-name {
+    font-size: 1.5rem;
+  }
+
+  .card-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .booster-image {
+    width: 125px;
+  }
+}
