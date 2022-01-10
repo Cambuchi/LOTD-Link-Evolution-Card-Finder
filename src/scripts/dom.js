@@ -3,7 +3,7 @@
 import cardBack from '../assets/images/CardBackEN.png';
 
 // adds a single card to the content areas
-const addCard = async (cardInfo) => {
+const addCard = async (cardInfo, cardImageLink) => {
   // target the content area to add a card to
   const cards = document.getElementById('cards');
   // create the card container
@@ -12,7 +12,7 @@ const addCard = async (cardInfo) => {
 
   // container for card image
   const cardImage = new Image();
-  cardImage.src = await getCardImage(cardInfo['Card Name']);
+  cardImage.src = cardImageLink;
   cardImage.classList = 'card-image';
 
   // container for card information
@@ -84,13 +84,14 @@ const populateCards = (cardArray, pageNum) => {
   let promiseCardArray = [];
 
   for (let i = 0; i < data.length; i++) {
-    console.log(data[i]);
-    addCard(data[i]);
+    promiseCardArray.push(getCardImage(data[i]['Card Name']));
   }
 
-  // data.forEach(async (card) => {
-  //   await addCard(card);
-  // });
+  Promise.all(promiseCardArray).then((cardImage) => {
+    for (let i = 0; i < data.length; i++) {
+      addCard(data[i], cardImage[i]);
+    }
+  });
 };
 
 const paginate = (cardArray, pageNum) => {
