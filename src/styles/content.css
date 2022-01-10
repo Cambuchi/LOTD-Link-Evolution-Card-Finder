@@ -1,0 +1,102 @@
+/*//////////////////*/
+ /* CSS FOR CONTENT */
+ /*/////////////////*/
+
+ @font-face {
+  font-family: 'Aileron-Light';
+  src: url(../assets/fonts/Aileron-Light.otf) format('opentype');
+  font-style: normal;
+}
+
+#content {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 10vh;
+  font-family: 'Aileron-Light', sans-serif;
+}
+
+#searchbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+#search-icon {
+  filter: opacity(50%);
+  height: 16px;
+  margin-right: 10px;
+}
+
+#search {
+  background: none;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+}
+
+#pagination {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+#previous, #next {
+  padding: 5px 5px 12px 5px;
+  font-size: 2rem;
+  margin: 10px;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#page-nums {
+  display: flex;
+}
+
+.paginate-num {
+  padding: 5px ;
+  font-size: 1rem;
+  margin: 10px;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+.paginate-num:hover:not(.active) {
+  background: #a8dcff;
+  transform: scale(1.1);
+  transition: all 0.1s linear;
+}
+
+.paginate-skip {
+  padding: 5px ;
+  font-size: 1rem;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 3px;
+  border-radius: 10px;
+}

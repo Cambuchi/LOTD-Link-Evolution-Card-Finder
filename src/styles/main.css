@@ -1,0 +1,17 @@
+/*//////////////*/
+ /* GENERAL CSS */
+/*//////////////*/
+
+html {
+  overflow-y: scroll;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #484848;
+}

@@ -1,0 +1,35 @@
+/*/////////////////*/
+ /* CSS FOR HEADER */
+ /*////////////////*/
+
+@font-face {
+  font-family: 'Matrix Regular Small Caps';
+  src: url(../assets/fonts/Matrix-Regular-Small-Caps.ttf) format('truetype');
+  font-style: normal;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #383838;
+  height: 10vh;
+  flex-shrink: 0;
+  align-self: stretch;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.title {
+  color: #eaebeb;
+  font-size: 3rem;
+  font-family: 'Matrix Regular Small Caps';
+  flex-shrink: 0;
+  font-weight: 100;
+  letter-spacing: 0.05em;
+  padding: 10px 10px 10px 10px;
+  margin: 0px;
+}
