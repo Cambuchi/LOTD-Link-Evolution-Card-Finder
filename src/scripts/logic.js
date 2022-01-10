@@ -33,9 +33,12 @@ const createSearch = () => {
   let input = document.getElementById('search');
   let timeout = null;
 
-  input.onkeyup = function () {
-    searchConfirm();
-  };
+  input.addEventListener('keyup', function (e) {
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+      searchConfirm();
+    }, 1000);
+  });
 };
 
 export { load, createSearch };

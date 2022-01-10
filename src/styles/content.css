@@ -12,11 +12,26 @@
   margin-top: 10vh;
   display: flex;
   flex-direction: column;
-  padding: 5vh 10vh;
+  padding: 2vh 10vh;
   font-family: 'Aileron-Light', sans-serif;
   width: fit-content;
-  min-width: 55%;
+  max-width: 1280px;
   align-self: center;
+}
+
+#blurb {
+  display: flex;
+  justify-content: center;
+  flex-grow: 0;
+  background: #383838;
+  padding: 25px;
+  margin: 5px 0px 20px 0px;
+  color: #eaebeb;
+  border: 1px solid #181818;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  line-height: 1.75rem;
+  overflow-wrap: break-word;
 }
 
 #searchbar {

@@ -47,7 +47,7 @@ ul, li { /* reset the margin and padding */
 .booster-image {
   object-fit: contain;
   width: 175px;
-  flex-shrink: 0;
+  flex-shrink: 1;
 }
 
 .card-image {

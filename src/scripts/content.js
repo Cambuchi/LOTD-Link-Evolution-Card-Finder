@@ -7,6 +7,21 @@ const createContent = () => {
   const content = document.createElement('div');
   content.id = 'content';
 
+  const blurb = document.createElement('div');
+  blurb.id = 'blurb';
+  blurb.textContent =
+    'Yu-Gi-Oh! Legacy of the Duelist: Link Evolution has over 10,000 cards to ' +
+    'collect! For people like me who have not kept up with the Yu-Gi-Oh ' +
+    "franchise and have no clue what 5D's, Zexal, Arc-V, or VRAINS means, " +
+    'this card finder was made for you. Finding cards when you have no idea ' +
+    'who "Gong Strong" or "Soul Burner" is can be a real hassle. This finder ' +
+    'presents additional information to help ' +
+    'alleviate this. Enjoy pictures of both the  card and booster pack ' +
+    'characters, alternate farm locations, and information on rarity. ' +
+    "It's time to D-D-D-D-Duel! (Note: after typing your search, there is a " +
+    'slight delay before the search is performed. This avoids flooding the ' +
+    'Yugipedia API with requests on each keyup.)';
+
   const searchbar = document.createElement('div');
   searchbar.id = 'searchbar';
 
@@ -43,6 +58,7 @@ const createContent = () => {
   pagination.append(pageNums);
   pagination.append(next);
 
+  content.append(blurb);
   content.append(searchbar);
   content.append(cards);
   content.append(pagination);
