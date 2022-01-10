@@ -14,6 +14,9 @@
   flex-direction: column;
   padding: 5vh 10vh;
   font-family: 'Aileron-Light', sans-serif;
+  width: fit-content;
+  min-width: 55%;
+  align-self: center;
 }
 
 #searchbar {
@@ -42,7 +45,7 @@
 
 #pagination {
   display: flex;
-  justify-content:center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -59,6 +62,12 @@
   margin-bottom: 3px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+#previous:hover, #next:hover {
+  background: #a8dcff;
+  transform: scale(1.1);
+  transition: all 0.1s linear;
 }
 
 #page-nums {
@@ -82,6 +91,12 @@
 }
 
 .paginate-num:hover:not(.active) {
+  background: #a8dcff;
+  transform: scale(1.1);
+  transition: all 0.1s linear;
+}
+
+.active {
   background: #a8dcff;
   transform: scale(1.1);
   transition: all 0.1s linear;
