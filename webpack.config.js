@@ -9,7 +9,56 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'LOTD:Link Evolution Card Finder',
+      title: 'LOTD: Link Evolution Card Finder',
+      favicon: './src/assets/images/favicon.ico',
+      meta: {
+        description: {
+          name: 'description',
+          content:
+            'An information rich card finder for Yu-Gi-Oh! Legacy of the Duelist: Link Evolution',
+        },
+        keyword: {
+          name: 'keywords',
+          content:
+            'Yu-Gi-Oh, YuGiOh, LOTD, Legacy of the Duelist, Link Evolution',
+        },
+        'og:title': {
+          property: 'og:title',
+          content: 'LOTD: Link Evolution Card Finder',
+        },
+        'og:description': {
+          property: 'og:description',
+          content:
+            'An information rich card finder for Yu-Gi-Oh! Legacy of the Duelist: Link Evolution',
+        },
+        'og:type': { property: 'og:type', content: 'website' },
+        'og:url': {
+          property: 'og:url',
+          content:
+            'https://cambuchi.github.io/LOTD-Link-Evolution-Card-Finder/',
+        },
+        'og:image': {
+          property: 'og:image',
+          content: './src/assets/images/og-image.png',
+        },
+        'twitter:card': {
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        'twitter:title': {
+          name: 'twitter:title',
+          content: 'LOTD: Link Evolution Card Finder',
+        },
+        'twitter:description': {
+          name: 'twitter:description',
+          content:
+            'An information rich card finder for Yu-Gi-Oh! Legacy of the Duelist: Link Evolution',
+        },
+        'twitter:image': {
+          name: 'twitter:image',
+          content: './src/assets/images/og-image.png',
+        },
+      },
     }),
   ],
   output: {
