@@ -27,6 +27,7 @@
 Features to be added in the future:
 
 - Card saving feature to create your own searchable list.
+- Card zoom modal on click to read card text better.
 
 ##  Special Thanks
 
