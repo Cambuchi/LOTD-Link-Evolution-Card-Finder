@@ -78,6 +78,11 @@ const requestCardInfo = async (cardName) => {
 
 // populate the cards content container with current card list & page number
 const populateCards = (cardArray, pageNum) => {
+  // don't change card if pageNum is invalid
+  let numPages = Math.ceil(cardArray.length / 5);
+  if (pageNum === 0 || pageNum === numPages + 1) {
+    return;
+  }
   // using the page number, determine what slice of the list to populate with
   pageNum -= 1;
   let start = 0 + pageNum * 5;
@@ -112,8 +117,8 @@ const paginate = (cardArray, pageNum) => {
   // change the next and previous buttons to apply to current card list
   let next = document.getElementById('next');
   let previous = document.getElementById('previous');
-  // target the search input to scroll up to on paginate clicks
-  let input = document.getElementById('search');
+  // target area to scroll up to on page clicks
+  let scroll = document.getElementById('cards').offsetTop;
   // remove previous event handlers (so event handlers don't pile up)
   next.onclick = null;
   previous.onclick = null;
@@ -121,12 +126,12 @@ const paginate = (cardArray, pageNum) => {
   next.onclick = function () {
     populateCards(cardArray, pageNum + 1);
     paginate(cardArray, pageNum + 1);
-    input.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    window.scrollTo({ top: scroll - 130, behavior: 'smooth' });
   };
   previous.onclick = function () {
     populateCards(cardArray, pageNum - 1);
     paginate(cardArray, pageNum - 1);
-    input.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    window.scrollTo({ top: scroll - 130, behavior: 'smooth' });
   };
 
   // logic for paginating when there are more than 7 pages
@@ -208,8 +213,8 @@ const paginate = (cardArray, pageNum) => {
 const addPaginateNum = (cardArray, i, pageNum) => {
   // target the pagination number container
   const pageNums = document.getElementById('page-nums');
-  // target the search input to scroll up to on page clicks
-  let input = document.getElementById('search');
+  // target area to scroll up to on page clicks
+  let scroll = document.getElementById('cards').offsetTop;
   // create the pagination number
   const paginateNum = document.createElement('div');
   paginateNum.classList = 'paginate-num';
@@ -223,7 +228,7 @@ const addPaginateNum = (cardArray, i, pageNum) => {
   paginateNum.onclick = function () {
     populateCards(cardArray, i);
     paginate(cardArray, i);
-    input.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    window.scrollTo({ top: scroll - 130, behavior: 'smooth' });
   };
   // add number into number container
   pageNums.append(paginateNum);
